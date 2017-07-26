@@ -1,0 +1,26 @@
+{
+    "name": "chris-kruining/zf3-filterable-routestack",
+    "type": "RouteStack",
+    "description": "this is an expansion on the TreeRouteStack class that the zendframework/zend-router provides",
+    "keywords": ["RouteStack","PHP"],
+    "homepage": "https://github.com/chris-kruining/zf3-filterable-routestack",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Kruining",
+            "email": "chris@kruining.eu",
+            "homepage": "https://github.com/Chris-Kruining",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "7.*",
+        "chris-kruining/utilities": "dev-master",
+		"zendframework/zend-router" : "3.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "CPB\\Extensions\\Zend\\Router\\": "src/"
+        }
+    }
+}
