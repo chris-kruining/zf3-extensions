@@ -1,5 +1,5 @@
 {
-    "name": "chris-kruining/zf3-filterable-routestack",
+    "name": "chris-kruining/zf3-filterablerouter",
     "type": "RouteStack",
     "description": "this is an expansion on the TreeRouteStack class that the zendframework/zend-router provides",
     "keywords": ["RouteStack","PHP"],
