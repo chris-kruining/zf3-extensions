@@ -4,11 +4,20 @@ namespace CPB\Extensions\Zend\Router
 {
     use Zend\Router\Http\TreeRouteStack;
 
-    class FilterableTreeStack extends TreeRouteStack
+    class FilterableTreeRouteStack extends TreeRouteStack
 	{
-	    public static function factory($options = [])
+	    use FilterTrait;
+
+	    protected function init()
         {
-            return parent::factory($options);
+            parent::init();
+
+            $this->routePluginManager->setAllowOverride(true);
+
+            $this->routePluginManager->setAlias('part', Part::class);
+            $this->routePluginManager->setAlias('Part', Part::class);
+
+            $this->routePluginManager->setAllowOverride(false);
         }
     }
 }

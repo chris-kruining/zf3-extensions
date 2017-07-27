@@ -16,7 +16,8 @@
     "require": {
         "php": "7.*",
         "chris-kruining/utilities": "dev-master",
-		"zendframework/zend-router" : "3.*"
+		"zendframework/zend-router" : "3.*",
+		"zendframework/zend-mvc" : "3.*"
     },
     "autoload": {
         "psr-4": {
