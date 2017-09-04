@@ -8,6 +8,14 @@ namespace CPB\Extensions\Zend\Router
     trait FilterTrait
     {
         private $filter;
+        private $name;
+
+        public function addRoute($name, $route, $priority = null)
+        {
+            $this->name = $name;
+
+            parent::addRoute($name, $route, $priority);
+        }
 
         protected function routeFromArray($spec)
         {
@@ -38,8 +46,12 @@ namespace CPB\Extensions\Zend\Router
         {
             $match = parent::match($request, $pathOffset, $options);
 
-            if($this->filter !== null && $match !== null && !$this->execute())
-            {
+            if(
+                $this->filter !== null &&
+                $match !== null &&
+                $this->name === $match->getMatchedRouteName() &&
+                !$this->execute()
+            ) {
                 return new RouteMatch($match);
             }
 
