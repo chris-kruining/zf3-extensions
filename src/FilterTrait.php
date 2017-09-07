@@ -7,29 +7,21 @@ namespace CPB\Extensions\Zend\Router
 
     trait FilterTrait
     {
-        private $filter;
-        private $name;
+        private $filters = [];
 
         public function addRoute($name, $route, $priority = null)
         {
-            $this->name = $name;
-
-            parent::addRoute($name, $route, $priority);
-        }
-
-        protected function routeFromArray($spec)
-        {
-            if(key_exists('filter', $spec))
+            if(!key_exists($name, array_keys($this->filters)) && key_exists('filter', $route))
             {
-                if(!is_callable($spec['filter']))
+                if(!is_callable($route['filter']))
                 {
                     throw new FilterNotCallableException;
                 }
 
-                $this->filter = $spec['filter'];
+                $this->filters[$name] = $route['filter'];
             }
 
-            return parent::routeFromArray($spec);
+            parent::addRoute($name, $route, $priority);
         }
 
         protected function setFilter(callable $filter)
@@ -46,21 +38,22 @@ namespace CPB\Extensions\Zend\Router
         {
             $match = parent::match($request, $pathOffset, $options);
 
-            if(
-                $this->filter !== null &&
-                $match !== null &&
-                $this->name === $match->getMatchedRouteName() &&
-                !$this->execute()
-            ) {
-                return new RouteMatch($match);
+            if($match !== null)
+            {
+                $name = array_intersect(explode('/', $match->getMatchedRouteName()), array_keys($this->filters))[0] ?? null;
+
+                if($name !== null && !$this->execute($name))
+                {
+                    return new RouteMatch($match);
+                }
             }
 
             return $match;
         }
 
-        protected function execute() : bool
+        protected function execute(string $name) : bool
         {
-            $result = call_user_func($this->filter);
+            $result = call_user_func($this->filters[$name]);
 
             if(!is_bool($result))
             {
