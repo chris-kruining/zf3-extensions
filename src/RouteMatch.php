@@ -12,7 +12,7 @@ namespace CPB\Extensions\Zend\Router
             $this->matchedRouteName = $original->getMatchedRouteName();
 
             parent::__construct([
-                'error' => 'route matched but filter return false',
+                'error' => 'route matched but filter returned false',
                 'errorCode' => 403
             ]);
         }
