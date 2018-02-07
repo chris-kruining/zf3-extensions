@@ -13,11 +13,14 @@
             "role": "Developer"
         }
     ],
+    "replace": [
+        "chris-kruining/zf3-extensions"
+    ],
     "require": {
         "php": "7.*",
         "chris-kruining/utilities": ">=0.1.0",
-	"zendframework/zend-router" : "3.*",
-	"zendframework/zend-mvc" : "3.*"
+        "zendframework/zend-router" : "3.*",
+        "zendframework/zend-mvc" : "3.*"
     },
     "autoload": {
         "psr-4": {
