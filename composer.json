@@ -13,9 +13,9 @@
             "role": "Developer"
         }
     ],
-    "replace": [
-        "chris-kruining/zf3-extensions"
-    ],
+    "replace": {
+        "chris-kruining/zf3-extensions": "*"
+    },
     "require": {
         "php": "7.*",
         "chris-kruining/utilities": ">=0.1.0",
