@@ -1,5 +1,5 @@
-# zf3-filterablerouter
-this is an expansion on the TreeRouteStack class that the zendframework/zend-router provides
+# zf3-extensions
+this is an extension of certain zend-framework 3 packages to enable me to do certain things
 
 # Instalation
 
@@ -7,7 +7,7 @@ this is an expansion on the TreeRouteStack class that the zendframework/zend-rou
 $ composer require chris-kruining/zf3-filterablerouter
 ```
 
-# Configuration
+# Configuration of filterable routes
 
 ```php
 return [
