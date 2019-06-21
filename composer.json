@@ -18,9 +18,9 @@
     },
     "require": {
         "php": "7.*",
-        "chris-kruining/utilities": "^0.2.0",
-        "zendframework/zend-router": "^3.0",
-        "zendframework/zend-mvc": "^3.0"
+        "chris-kruining/utilities": "0.2.20",
+        "zendframework/zend-router": "3.0.2",
+        "zendframework/zend-mvc": "3.1.1"
     },
     "autoload": {
         "psr-4": {
