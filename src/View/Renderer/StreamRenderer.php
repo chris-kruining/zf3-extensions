@@ -1,8 +1,8 @@
 <?php
 
-namespace CPB\Extensions\Zend\View\Renderer
+namespace CPB\Extensions\Laminas\View\Renderer
 {
-    use Zend\View\Renderer\PhpRenderer;
+    use Zend\Laminas\Renderer\PhpRenderer;
     
     class StreamRenderer extends PhpRenderer
     {
