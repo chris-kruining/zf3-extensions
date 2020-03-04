@@ -1,10 +1,10 @@
 <?php
 
-namespace CPB\Extensions\Zend\View
+namespace CPB\Extensions\Laminas\View
 {
-    use CPB\Extensions\Zend\View\Renderer\StreamRenderer;
+    use CPB\Extensions\Laminas\View\Renderer\StreamRenderer;
     use Interop\Container\ContainerInterface;
-    use Zend\ServiceManager\Factory\FactoryInterface;
+    use Laminas\ServiceManager\Factory\FactoryInterface;
     
     class ViewRendererFactory implements FactoryInterface
     {
