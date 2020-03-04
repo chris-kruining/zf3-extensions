@@ -1,8 +1,8 @@
 <?php
 
-namespace CPB\Extensions\Zend\Router
+namespace CPB\Extensions\Laminas\Router
 {
-    class Part extends \Zend\Router\Http\Part
+    class Part extends \Laminas\Router\Http\Part
     {
         use FilterTrait;
     }
