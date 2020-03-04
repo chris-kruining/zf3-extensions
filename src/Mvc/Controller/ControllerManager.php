@@ -1,8 +1,8 @@
 <?php
 
-namespace CPB\Extensions\Zend\Mvc\Controller
+namespace CPB\Extensions\Laminas\Mvc\Controller
 {
-    class ControllerManager extends \Zend\Mvc\Controller\ControllerManager
+    class ControllerManager extends \Laminas\Mvc\Controller\ControllerManager
     {
         protected $autoAddInvokableClass = true;
     }
