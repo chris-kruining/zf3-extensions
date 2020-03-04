@@ -1,6 +1,6 @@
 <?php
 
-namespace CPB\Extensions\Zend\Router
+namespace CPB\Extensions\Laminas\Router
 {
     class FilterNotCallableException extends \Exception
     {
