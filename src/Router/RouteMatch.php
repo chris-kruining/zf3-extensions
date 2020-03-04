@@ -1,12 +1,12 @@
 <?php
 
-namespace CPB\Extensions\Zend\Router
+namespace CPB\Extensions\Laminas\Router
 {
-    class RouteMatch extends \Zend\Router\Http\RouteMatch
+    class RouteMatch extends \Laminas\Router\Http\RouteMatch
     {
         protected $original;
 
-        public function __construct(\Zend\Router\Http\RouteMatch $original)
+        public function __construct(\Laminas\Router\Http\RouteMatch $original)
         {
             $this->original = $original;
             $this->matchedRouteName = $original->getMatchedRouteName();

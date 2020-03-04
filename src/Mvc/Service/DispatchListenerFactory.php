@@ -1,10 +1,10 @@
 <?php
 
-namespace CPB\Extensions\Zend\Mvc\Service
+namespace CPB\Extensions\Laminas\Mvc\Service
 {
-    use CPB\Extensions\Zend\Mvc\DispatchListener;
+    use CPB\Extensions\Laminas\Mvc\DispatchListener;
     use Interop\Container\ContainerInterface;
-    use Zend\ServiceManager\Factory\FactoryInterface;
+    use Laminas\ServiceManager\Factory\FactoryInterface;
     
     class DispatchListenerFactory implements FactoryInterface
     {

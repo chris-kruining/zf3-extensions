@@ -1,10 +1,10 @@
 <?php
 
-namespace CPB\Extensions\Zend\Router
+namespace CPB\Extensions\Laminas\Router
 {
-    use Zend\Mvc\MvcEvent;
+    use Laminas\Mvc\MvcEvent;
 
-    class RouteListener extends \Zend\Mvc\RouteListener
+    class RouteListener extends \Laminas\Mvc\RouteListener
     {
         public function onRoute(MvcEvent $event)
         {

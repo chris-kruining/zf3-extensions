@@ -1,9 +1,9 @@
 <?php
 
-namespace CPB\Extensions\Zend\Router
+namespace CPB\Extensions\Laminas\Router
 {
     use Psr\Log\InvalidArgumentException;
-    use Zend\Stdlib\RequestInterface;
+    use Laminas\Stdlib\RequestInterface;
 
     trait FilterTrait
     {

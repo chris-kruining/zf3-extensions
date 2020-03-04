@@ -7,11 +7,11 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace CPB\Extensions\Zend\Mvc\Service;
+namespace CPB\Extensions\Laminas\Mvc\Service;
 
-use CPB\Extensions\Zend\Mvc\Controller\ControllerManager;
+use CPB\Extensions\Laminas\Mvc\Controller\ControllerManager;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class ControllerManagerFactory implements FactoryInterface
 {

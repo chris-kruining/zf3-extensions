@@ -1,8 +1,8 @@
 <?php
 
-namespace CPB\Extensions\Zend\Router
+namespace CPB\Extensions\Laminas\Router
 {
-    use Zend\Router\Http\TreeRouteStack;
+    use Laminas\Router\Http\TreeRouteStack;
 
     class FilterableTreeRouteStack extends TreeRouteStack
 	{

@@ -1,12 +1,12 @@
 <?php
 
-namespace CPB\Extensions\Zend\Mvc
+namespace CPB\Extensions\Laminas\Mvc
 {
-    use Zend\Router\RouteMatch;
-    use Zend\Mvc\Controller\ControllerManager;
-    use Zend\Mvc\MvcEvent;
+    use Laminas\Router\RouteMatch;
+    use Laminas\Mvc\Controller\ControllerManager;
+    use Laminas\Mvc\MvcEvent;
 
-    class DispatchListener extends \Zend\Mvc\DispatchListener
+    class DispatchListener extends \Laminas\Mvc\DispatchListener
     {
         protected $controllerManager;
 
