@@ -7,6 +7,13 @@ namespace CPB\Extensions\Laminas\Logger
 
     use Laminas\Log\Writer\AbstractWriter;
 
+    /**
+     * Class ErrorLogWriter
+     *
+     * A writer is an object that inherits from Laminas\Log\Writer\AbstractWriter. A writer's responsibility is to record log data to a storage backend.
+     *
+     * @package CPB\Extensions\Laminas\Logger
+     */
     class ErrorLogWriter extends AbstractWriter
     {
         /**
@@ -19,11 +26,6 @@ namespace CPB\Extensions\Laminas\Logger
         /**
          * Constructor
          *
-         * @param  string|resource|array|Traversable $streamOrUrl Stream or URL to open as a stream
-         * @param  string|null $mode Mode, only applicable if a URL is given
-         * @param  null|string $logSeparator Log separator string
-         * @param  null|int $filePermissions Permissions value, only applicable if a filename is given;
-         *     when $streamOrUrl is an array of options, use the 'chmod' key to specify this.
          * @return Stream
          * @throws Exception\InvalidArgumentException
          * @throws Exception\RuntimeException
