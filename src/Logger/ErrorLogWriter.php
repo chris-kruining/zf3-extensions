@@ -32,7 +32,8 @@ namespace CPB\Extensions\Laminas\Logger
          */
         public function __construct()
         {
-            if ($this->formatter === null) {
+            if ($this->formatter === null)
+            {
                 $this->formatter = new SimpleFormatter();
             }
         }
@@ -46,8 +47,7 @@ namespace CPB\Extensions\Laminas\Logger
          */
         protected function doWrite(array $event)
         {
-            $line = $this->formatter->format($event) . $this->logSeparator;
-            error_log($line);
+            error_log($this->formatter->format($event) . $this->logSeparator);
         }
 
         /**
@@ -59,6 +59,7 @@ namespace CPB\Extensions\Laminas\Logger
         public function setLogSeparator($logSeparator)
         {
             $this->logSeparator = (string) $logSeparator;
+
             return $this;
         }
 
