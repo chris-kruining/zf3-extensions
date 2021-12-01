@@ -13,12 +13,9 @@
             "role": "Developer"
         }
     ],
-    "replace": {
-        "chris-kruining/zf3-extensions": "*"
-    },
     "require": {
-        "php": "7.*",
-        "chris-kruining/utilities": "^0",
+        "php": "^7.4",
+        "chris-kruining/utilities": "master",
         "laminas/laminas-router": "^3",
         "laminas/laminas-mvc": "^3"
     },
