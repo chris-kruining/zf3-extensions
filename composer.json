@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "php": "^7.4",
+        "php": ">=7.4",
         "chris-kruining/utilities": "master",
         "laminas/laminas-router": "^3",
         "laminas/laminas-mvc": "^3"
