@@ -40,7 +40,7 @@ namespace CPB\Extensions\Laminas\Router
 
             if($match !== null)
             {
-                $name = array_intersect(explode('/', $match->getMatchedRouteName()), array_keys($this->filters))[0] ?? null;
+                $name = array_intersect(explode('/', $match->getMatchedRouteName() ?? ''), array_keys($this->filters))[0] ?? null;
 
                 if($name !== null && !$this->execute($name))
                 {
